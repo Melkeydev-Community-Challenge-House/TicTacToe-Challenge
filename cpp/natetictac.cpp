@@ -53,60 +53,63 @@ void CheckWin()
           std::cout << PlayerWinningMessage << endl;
           exit(0);
       }
-      // TopMiddle --> BottomMiddle 
+      // TopMiddle --> BottomMiddle a
       else if(PiecePlace[2] == 'X' && PiecePlace[5] == 'X' && PiecePlace[8] == 'X')
       {
           std::cout << PlayerWinningMessage << endl;
           exit(0);          
       // TopLeft --> BottomLeft 
       }
-      else if(PiecePlace[3] == 'X' && PiecePlace[6] == 'X' && PiecePlace[9] == 'X')
+      else if(PiecePlace[3] == 'X' && PiecePlace[5] == 'X' && PiecePlace[7] == 'X')
       {
           std::cout << PlayerWinningMessage << endl;
-          exit(0);
-      // TopLeft --> TopRight
+          exit(0);          
+      // TopLeft --> BottomLeft 
       }
+      //computer decides
       else if(PiecePlace[1] == 'O' && PiecePlace[2] == 'O' && PiecePlace[3] == 'O')
+      {
+          std::cout << "\n\n\n "<< ComputerWinningMessage << endl;
+          exit(0);
+        }
+      // TopLeft --> BottomLeft
+      else if(PiecePlace[1] == 'O' && PiecePlace[4] == 'O' && PiecePlace[7] == 'O')
+      {
+          std::cout << "\n\n\n" << ComputerWinningMessage << endl; 
+          exit(0);
+      }
+      // TopLeft --> BootomRight
+      else if(PiecePlace[1] == 'O' && PiecePlace[5] == 'O' && PiecePlace[9] == 'O')
       {
           std::cout << ComputerWinningMessage << endl;
           exit(0);
-      // TopLeft --> BottomLeft
       }
-      else if(PiecePlace[1] == 'X' && PiecePlace[4] == 'O' && PiecePlace[7] == 'O')
-      {
-          std::cout << PlayerWinningMessage << endl; 
-          exit(0);
-      // TopLeft --> BootomRight
-      }
-      else if(PiecePlace[1] == 'X' && PiecePlace[5] == 'X' && PiecePlace[9] == 'X')
-      {
-          std::cout << PlayerWinningMessage << endl;
-          exit(0);
       // MiddleLeft --> MiddleRight
-      }
-      else if(PiecePlace[4] == 'X' && PiecePlace[5] == 'X' && PiecePlace[6] == 'X')
+      else if(PiecePlace[4] == 'O' && PiecePlace[5] == 'O' && PiecePlace[6] == 'O')
       {
-          std::cout << PlayerWinningMessage << endl;
+          std::cout << ComputerWinningMessage << endl;
           exit(0);
       // BottomLeft --> BottomRight
       }
-      else if(PiecePlace[7] == 'X' && PiecePlace[8] == 'X' && PiecePlace[9] == 'X')
+      else if(PiecePlace[7] == 'O' && PiecePlace[8] == 'O' && PiecePlace[9] == 'O')
       {
-          std::cout << PlayerWinningMessage << endl;
-          exit(0);
-      // TopMiddle --> BottomMiddle 
-      }
-      else if(PiecePlace[2] == 'X' && PiecePlace[5] == 'X' && PiecePlace[8] == 'X')
-      {
-          std::cout << PlayerWinningMessage << endl;
+          std::cout << ComputerWinningMessage << endl;
           exit(0);
       }
+      // TopMiddle --> BottomMiddle a
+      else if(PiecePlace[2] == 'O' && PiecePlace[5] == 'O' && PiecePlace[8] == 'O')
+      {
+          std::cout << ComputerWinningMessage << endl;
+          exit(0);          
       // TopLeft --> BottomLeft 
-      else if(PiecePlace[3] == 'X' && PiecePlace[6] == 'X' && PiecePlace[9] == 'X')
-      {
-          std::cout << PlayerWinningMessage << endl;
-          exit(0);
       }
+      else if(PiecePlace[3] == 'O' && PiecePlace[5] == 'O' && PiecePlace[7] == 'O')
+      {
+          std::cout << ComputerWinningMessage << endl;
+          exit(0);          
+      // TopLeft --> BottomLeft 
+      }
+     
       else if(PiecePlace[1] != '1' && PiecePlace[2] != '2' && PiecePlace[3] != '3' && PiecePlace[4] != '4' && PiecePlace[5] != '5' && PiecePlace[6] != '6' && PiecePlace[7] != '7' && PiecePlace[7] != '7' && PiecePlace[8] != '8' && PiecePlace[9] != '9' )
       {
         std::cout << "  Nobody won the match..." << endl;
